@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
+
+*{
+  font-family: 'Oswald';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  color: #3A9FC1;
+  height: 96px;
+  font-size: 3em;
+  line-height: 96px;
+  background-color: #E0EAEF;
+  padding: 0 60px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+h3{
+  color: #3A9FC1;
+}
+
+.body-content{
+  margin-top: 200px;
+  display: flex;
+  line-height: 2;
+}
+
+.settings{
+  flex: 3;
+  padding: 10px 20px;
+}
+
+.settings .coordenadas, .settings .parametros, .settings .etiquetas{
+  background-color: #E0EAEF;
+  padding: 10px 20px;
+  margin-bottom: 1em;
+}
+
+.settings .coordenadas-x-y{
+  padding: 10px 0;
+}
+
+.settings .buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.settings .buttons button:first-child{
+  margin-right: 2em;
+}
+
+.content-img{
+  flex: 3;
+}
+
+.axis{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  padding:0 10px;
+}
+
+.axis table {
+  border: 2px solid #E0EAEF;
+  width: 100%;
+}
+
+.axis table thead{
+  background-color: #E0EAEF;
+}
+.axis table td{
+  text-align: center;
+}
+
+button{
+  padding: .6em 1.5em;
+}
+
+.content-img{
+  border: 4px solid #E0EAEF;
+}

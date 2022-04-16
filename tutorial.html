@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="tutorial.css">
+</head>
+<body>
+  <div class="header">Tutorial</div>
+  <div class="index-bar">
+    <ul>
+      <li><a href="#vision">Visión General</a></li>
+      <li><a href="#introduccion">Introducción</a></li>
+      <li><a href="#robotica">Robótica</a></li>
+      <li><a href="#planificacion">Planificación</a></li>
+      <li><a href="#programacion">Programación</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </div>
+  <div class="content-body">
+    <h2 id="vision">Visión General</h2>
+    La robótica es la rama de la ingeniería mecánica, de la ingeniería electrónica y de las ciencias de la computación, que se ocupa del diseño, construcción, operación, estructura, manufactura y aplicación de los robots. <br>
+La robótica combina diversas disciplinas como la mecánica, la electrónica, la informática, la inteligencia artificial, la ingeniería de control y la física. Otras áreas importantes en robótica son el álgebra, los autómatas programables, la anima trónica y las máquinas de estados. <br>
+El término robot se popularizó con el éxito de la obra R.U.R. (Robots Universales Rossum), escrita por Karel Čapek en 1920. En la traducción al inglés de dicha obra la palabra checa robota, que significa trabajos forzados o trabajador, fue traducida al inglés como robot. 
+<h2 id="introduccion">Introducción</h2>
+El movimiento en la robótica tiene como finalidad la generación de un conjunto de acciones que permitan a un robot móvil moverse a través de un entorno conocido o desconocido para alcanzar uno o más objetivos partiendo de su posición inicial. Una de las tareas más comunes que se pueden resolver mediante la planificación de movimientos es la navegación en entornos con una gran cantidad de obstáculos.<br>
+El problema puede ser resuelto en diferentes niveles de abstracción. En cualquier caso, para un correcto funcionamiento en el robot real, es necesario tener en cuenta la incertidumbre del entorno, así como la de los sensores y actuadores del robot. Si la planificación se realiza a bajo nivel, se seleccionan las acciones de control, aunque como el mapa del entorno es desconocido, las soluciones encontradas pueden ser sub óptimas, o incluso no encontrarse. Otra alternativa es realizar una planificación a alto nivel, donde no se tenga en cuenta el control del robot y el objetivo sea la obtención de una ruta libre de obstáculos, realizando a más bajo nivel una conversión de las ordenes emitidas por el planificador a comandos de movimientos del robot al obtener la ruta. No es lo mismo planificar para un robot con un movimiento de tipo Ackerman, que, para uno de tipo referencial, que permite giros sobre sí mismo.<br>
+<h2 id="robotica">Robótica</h2>
+La robótica va unida a la construcción de "artefactos" que trataban de materializar el deseo humano de crear seres a su semejanza y que al mismo tiempo lo descargasen de trabajos tediosos o peligrosos. El ingeniero español Leonardo Torres Quevedo (que construyó el primer mando a distancia para su automóvil mediante telegrafía, el ajedrecista automático, el primer transbordador aéreo y otros muchos ingenios), acuñó el término "automática" en relación con la teoría de la automatización de tareas tradicionalmente asociadas.<br>
+Karel Čapek, un escritor checo, acuñó en 1920 el término "robot" en su obra dramática Rossum's Universal Robots / R.U.R., a partir de la palabra checa robota, que significa servidumbre o trabajo forzado. El término robótica es acuñado por Isaac Asimov, definiendo a la ciencia que estudia a los robots. Asimov creó también las tres leyes de la robótica. En la ciencia ficción se ha imaginado a los robots visitando nuevos mundos, haciéndose con el poder o, simplemente, aliviando de las labores caseras.
+
+    <h2 id="planificacion">Planificación</h2>
+    La planificación de movimientos supone guiar el robot desde un punto de inicio a uno de fin, a través de una ruta libre de obstáculos. Un algoritmo de planificación de movimientos debe producir, a partir del objetivo que se pretende alcanzar y de los datos disponibles del entorno en el que se debe llevar a cabo la navegación, una serie de comandos que permitan al robot transitar de forma segura en un entorno con obstáculos hasta completar la tarea.<br>
+Para poder abordar el problema es necesario almacenar en todo momento información sobre el entorno del robot, lo más adecuado para un problema de planificación de movimiento 2D es un mapa de tipo grid. Es importante que esta información este lo más actualizada posible, ya que en base a ella el algoritmo de planificación toma decisiones sobre cuál es la mejor ruta de entre todas las posibles que se conecta el estado actual y el objetivo.<br>
+La planificación de movimiento se ha planteado como un grafo dirigido, donde los nodos son los estados del robot, definidos en cinco dimensiones, y los arcos son los movimientos discretos, o trayectorias primitivas, que son las acciones de control realizables por el robot que permiten transitar entre ellos. Cada uno de estos movimientos está asociado a una orden de control concreta, por lo que la solución aportada por el algoritmo de búsqueda es una composición de estos movimientos, y por tanto de órdenes de control, que permiten alcanzar el punto objetivo partiendo del estado actual del robot. Tanto en los estados del robot como el conjunto de acciones son discretos, por lo que se ha planteado la planificación como un proceso resoluble mediante un algoritmo de búsqueda.
+
+
+    <h2 id="programacion">Programación</h2>
+    La programación y la robótica van de la mano, tanto en el sector profesional como en el educativo. Y es que diseñar y construir un robot para una tarea concreta tiene sentido si posteriormente le introducimos las órdenes de algún modo.<br>
+    En este sentido, los recursos disponibles de programación y robótica para niños y jóvenes se difuminan en el horizonte. Así, mientras que para los más novicios encontramos por un lado kits de construcción y por otras herramientas que les ayudan a pensar de forma lógica y ordenada, conforme van creciendo las propuestas se mezclan.<br>
+    Hemos dividido los recursos en cuatro apartados, no obstante, sabemos que algunos podrían caber perfectamente en otras secciones. En el primero encontramos juegos que enseñan a tener nociones básicas de programación, en algunos casos incluso sin requerir dispositivos. En el segundo nos centramos en Scratch, un lenguaje de programación específicamente creado para niños, y en recursos para aprenderlo de forma directa o aplicándolo en elementos físicos.
+    En cuanto al aprendizaje de robótica, hemos diferenciado en kits donde lo esencial es la creación de estructuras, incorporando ciertos elementos de programación de relativa complejidad.<br>
+    Finalmente hemos destinado un apartado propio a Arduino, un concepto que si bien está destinado a adultos (o adultos jóvenes), por su interés y posibilidades también puede resultar interesante a adolescentes con cierta destreza y conocimientos.
+    
+
+
+    <h2 id="recursos">Recursos</h2>
+    Nos dirigimos a una sociedad con un alto grado de tecnificación en la que muchas de las tareas cotidianas van a realizarse de una manera muy diferente a como las resolvemos en la actualidad, y en esta sociedad va a ser necesario disponer de una serie de conocimientos básicos que permitan a los ciudadanos del futuro saber cómo programar a los robots, tener nociones básicas sobre su funcionamiento y saber, también, de qué manera están construidos y cómo se podrán resolver pequeñas averías que, con toda seguridad, surgirán con cierta frecuencia.<br>
+Por esta razón en la actualidad se están reforzando las enseñanzas en la escuela de las materias que conforman las disciplinas STEM: del inglés Science (Ciencias), Technology (Tecnología), Engineering (Ingeniería) y Mathematic (Matemáticas); ya que son estas las que conforman la base de la construcción y de la programación de los robots.<br>
+No solo eso, sino que cualquier buen programador podrá decirte que la base de una buena programación es el uso de una buena sintaxis y de una correcta semántica, siendo imprescindible por lo tanto también reforzar la enseñanza de la Lengua, e incluso debemos tener en cuenta también que los robots deberán ser capaces de presentar comportamientos diferentes ante situaciones que involucren a personas con diferentes culturas, por lo que la enseñanza de la historia, desde un punto de vista muy local y también desde un punto de vista global también adquiere una importancia vital.
+Si te interesa iniciar a tus alumnos en los conceptos fundamentales de la robótica, si quieres también iniciarles en el mundo de la programación, te ofrezco diez sitios web que pueden serte de mucha utilidad:
+
+    <ul>
+      <li>Mindstorms</li>
+      <li>Code.org</li>
+      <li>Robot Virtual Worlds</li>
+      <li>Scratch for arduino</li>
+      <li>Botbat</li>
+    </ul>
+  </div>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        let yOffset = -112;
+        let element = document.querySelector(this.getAttribute('href'));
+        let y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    });
+});
+  </script>
+</body>
+</html>

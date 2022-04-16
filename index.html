@@ -8,12 +8,23 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="header">Laboratorio Virtual de Robótica</div>
+  <div class="header">Laboratorio virtual de Robótica</div>
   <div class="section">
-    <div class="col">Tutorial</div>
-    <div class="col">Simulación</div>
-    <div class="col">Programación</div>
+    <div class="col" id="tutorial">Tutorial</div>
+    <div class="col" id="simulacion">Simulación</div>
+    <div class="col" id="programacion">Programación</div>
   </div>
   <script src="index.js"></script>
+  <script>
+    tutorial.addEventListener('click', function(){
+      location.href = "./tutorial.html"
+    })
+    programacion.addEventListener('click', function(){
+      location.href = "./programacion.html"
+    })
+    simulacion.addEventListener('click', function(){
+      location.href = "./simulacion.html"
+    })
+  </script>
 </body>
 </html>

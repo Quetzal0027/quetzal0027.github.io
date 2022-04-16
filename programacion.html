@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monaco editor</title>
+  <link rel="stylesheet" data-name="vs/editor/editor.main" href="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.20.0/min/vs/editor/editor.main.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+  <link rel="stylesheet" href="programacion.css">
+</head>
+<body>
+  <div class="header">Entorno de programación</div>
+  <div class="body">
+    <div id="container" class="container"></div>
+    <div class="options">
+      <div class="form-group">
+        <input type="text" placeholder="Archivo de salida...">
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Clase principal...">
+      </div>
+
+      <div class="form-group">
+        <input type="checkbox" value=""> Incluir información del debug
+      </div>
+
+      <div class="form-group">
+        <button>Compilar y ejecutar</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.26.1/min/vs/loader.min.js"></script>
+  <script>
+    require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.26.1/min/vs' } });
+    require(["vs/editor/editor.main"], () => {
+      monaco.editor.create(document.getElementById('container'), {
+        value: `const { CloudWatchLogs } = require('aws-sdk');
+const AWS = require('aws-sdk')
+
+const getTasks = async (event) => {
+  try{
+    const dynamodb = new AWS.DynamoDB.DocumentClient();
+  
+    const result = await dynamodb.scan({
+      TableName: 'TaskTable'
+    }).promise();
+  
+    const tasks = result.Items;
+
+    console.log(tasks);
+
+    return {
+      status : 200,
+      body: {tasks}
+    }
+  } catch(error) {
+    console.log(error)
+  }  
+}
+
+module.exports = {getTasks};`,
+        language: 'javascript',
+        theme: 'vs-dark',
+      });
+    });
+    
+    toastr.options = {
+      "postitionClass": "toast-bottom-right"
+    }
+  </script>
+    
+</body>
+
+</html>
